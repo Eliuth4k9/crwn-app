@@ -58,7 +58,7 @@ export const CollectionFooterContainer = styled.div`
   height: 5%;
   display: flex;
   justify-content: space-between;
-  font-size: 15px;
+  font-size: 18px;
 `;
 
 export const NameContainer = styled.span`
