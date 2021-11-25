@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
+import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
 import { GlobalStyle } from './global.styles';
 
@@ -28,6 +29,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Switch>
+        <ErrorBoundary>
         <Suspense fallback={<Spinner />}>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage} />
@@ -40,6 +42,7 @@ const App = () => {
           }
         />
         </Suspense>
+        </ErrorBoundary>
       </Switch>
     </div>
   );
